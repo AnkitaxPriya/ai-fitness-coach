@@ -31,7 +31,7 @@ https://github.com/user-attachments/assets/0b82e3d7-7ce5-42ab-ae5b-6d2ec27839e0
 ### 1. Install dependencies (once)
 
 ```bash
-cd ~/Desktop/squatAIcoach
+cd ~/Desktop/ai-fitness-coach
 pip install -r requirements.txt
 ```
 
@@ -75,7 +75,7 @@ On first run MediaPipe downloads its pose model (~10 MB, cached for future runs)
 ## Folder structure
 
 ```
-squatAIcoach/
+ai-fitness-coach/
 ├── main.py              Entry point — OpenCV capture + render loop
 ├── config.py            Thresholds, cooldowns, coaching messages
 ├── pose_detector.py     MediaPipe wrapper + landmark smoothing + draw_cached
