@@ -235,11 +235,13 @@ def print_report(sessions: list[dict[str, Any]], label: str) -> None:
         best_date  = fmt_date(best_session.get("date", ""))
         reps_date  = fmt_date(most_reps_session.get("date", ""))
 
+        score = best_session.get('avg_score', 0)
+
         print(
             f"    Best avg score :  "
-            f"{green(f'{best_session.get('avg_score', 0):.1f}')}"
+            f"{green(f'{score:.1f}')}"
             f"  on {best_date}"
-       )
+    )
         print(
             f"    Most reps      :  "
             f"{bold(str(most_reps_session.get('total_reps', 0)))} reps"
