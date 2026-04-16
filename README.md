@@ -86,7 +86,31 @@ ai-fitness-coach/
 ├── utils.py             Math helpers (angle, moving average, colours)
 ├── requirements.txt
 ├── run.sh               Launcher (handles Python path + dep check)
-└── session_log.json     Appended on every run
+├── session_log.json     Appended on every run
+|── show_stats.py        View session history, score trends, and form issues
+```
+
+---
+
+## Viewing your progress
+
+After one or more sessions, run:
+
+```bash
+python3 show_stats.py
+```
+
+This reads `session_log.json` and prints a full progress report:
+- Per-session table with date, reps, score, duration, and top issue
+- Score trend sparkline across all sessions
+- Bar chart of your most common form issues
+- Personal records (best score session, most reps in a session)
+
+**Options:**
+```
+python3 show_stats.py --last 5        # show last 5 sessions
+python3 show_stats.py --file path     # custom log file path
+python3 show_stats.py --no-colour     # plain text output for piping
 ```
 
 ---
